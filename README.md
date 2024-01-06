@@ -7,6 +7,7 @@ This version does not directly control 220v loads but you can do so by adding re
 ![alt text](https://github.com/zeus074/C64-light-controller/blob/main/IMG/lightscanner.jpg)
 
 **Components:**
+
 R1-R8	Resistors 390R
 R9-R16	Resistors 1K
 R17-R24	Resistors 10K (*)
@@ -25,19 +26,23 @@ J3		Header 9pin (optional)
 (*) R17-R24 and T1-T8 are optiona if you not need a open collector output.
 
 **PCB**
+
 :coffee: if you want the PCB, please support me and follow this link : <a href="https://www.pcbway.com/project/shareproject/C64_Light_controller_6453b34b.html" target="_NEW">PCBWAY!</a>
 
 **Directory**
+
 Schematic : Schematic file in PDF
 IMG : Some pictures
 
 **How it works**
+
 A very simple interface in its schematic, the outputs of the C64 (user port) handle the photocouplers that provide electrical isolation of the computer from any problems on the power and control side.
 The photocouplers drive transistors through an exor port to have an open collector output.
 The exor chips are used exclusively to be able to reverse the signal coming from the computer via a dip switch (one is enough, but they are more easily found with two switches).
 The Commodore64 to handle the outputs must first set the CIA registers to indicate whether the ports will be input/output and their value.
 
 Example:
+
 POKE 56579,255 Sets all 8 ports as output.
 POKE 56577,1 Sets the bit0 of the user port (turns on the first LED)
 POKE 56577,255 Sets all BITs of the user port (turns on all LEDs).
@@ -48,12 +53,14 @@ Video: https://youtu.be/YFYZ48ZZcqM
 *Please consider subscribing to the channel*
 
 **ITALIAN VERSION**
+
 PCB per controllare luci o carichi tramite la porta utente del Commodore 64. (direttamente dagli anni '90)
 
 Schema revisionato di quello fatto nel 1990 che usavo per controllare le luci.
 Questa versione non controlla direttamente carichi a 220 volt ma puoi farlo aggiungendo una scheda relè o con triac.
 
 **Componenti:**
+
 R1-R8	Resistenze 390R
 R9-R16	Resistenze 1K
 R17-R24	Resistenze 10K (*)
@@ -72,19 +79,23 @@ J3		Header 9pin (opzionale)
 (*) R17-R24 e T1-T8 sono opzionali se non utilizzi l'uscita open collector.
 
 **PCB**
+
 :coffee: Se ti occorre il PCB, supporta questo lavoro prendendolo a questo link : <a href="https://www.pcbway.com/project/shareproject/C64_Light_controller_6453b34b.html" target="_NEW">PCBWAY!</a>
 
 **Directory**
+
 Schematic : File dello schema in PDF
 IMG : Alcune foto
 
 **Come funziona**
+
 Il funzionamento dell'interfaccia è sempliice, le uscite del C64 (porta utente) comandano dei fotoaccoppiatori che provvedono ad isolare elettricamente il computer da qulsiasi problema sulla linea di potenza e controllo.
 I fotoaccoppiatori comandano tramite delle porte exor i transistor per avere un'uscita open collector.
 Le porte exor csono usate per invertire il segnale del computer (in alcuni programmi si utilizzavano uscite negate) tramite il dip switch (basta un solo contatto, ma è più facile trovarli con 2 o più).
 Il Commodore64 per controllare le uscite deve settare prima i registri del CIA e specificare quale porta sarà un ingresso o uscita e lo stato.
 
 Esempio:
+
 POKE 56579,255 	Imposta tutte le 8 porte come uscite.
 POKE 56577,1 	Imposta il bit0 della porta utente (accende il primo LED)
 POKE 56577,255 	Imposta tutti i bit della porta utente (accende tutti i LEDs).
